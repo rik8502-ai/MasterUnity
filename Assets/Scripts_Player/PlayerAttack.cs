@@ -47,7 +47,6 @@ public class PlayerAttack : MonoBehaviour
                 StartCoroutine(FireballAttack());
             }
         }
-    
     }
 
     private IEnumerator ClubAttack()

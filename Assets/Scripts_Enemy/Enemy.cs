@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    //komento
     //移動スピード
     [SerializeField] private float moveSpeed = 5.0f;
 

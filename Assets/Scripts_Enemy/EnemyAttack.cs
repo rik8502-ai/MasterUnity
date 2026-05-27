@@ -21,7 +21,6 @@ public class EnemyAttack : MonoBehaviour
     {
         //最初は攻撃用のオブジェクトの当たり判定をOFFにする
         attackCollider.enabled = false;
-
     }
 
     // Update is called once per frame
