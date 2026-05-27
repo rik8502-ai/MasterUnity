@@ -4,7 +4,7 @@ public class EnemyWallChecker : MonoBehaviour
 {
     //敵キャラ
     [SerializeField] private Transform enemy;
-    //[SerializeField] private Enemy enemyScript;
+    [SerializeField] private EnemyMoveState enemyMoveStateScript;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -14,8 +14,6 @@ public class EnemyWallChecker : MonoBehaviour
         //壁を検知したら
         if (collision.CompareTag("Ground"))
         {
-            EnemyMoveState enemyMoveStateScript = enemy.GetComponent<EnemyMoveState>();
-
             if (enemyMoveStateScript != null)
             {
                 enemyMoveStateScript.FlipDirection();

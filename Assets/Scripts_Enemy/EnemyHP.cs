@@ -15,6 +15,10 @@ public class EnemyHP : MonoBehaviour
     //点滅時間
     [SerializeField] private float blinkingTime = 0.1f;
 
+    //ダメージ受けた時のテキスト表示と、頭の上に表示させるために取得したコライダー
+    [SerializeField] private DamageText damageTextPrefab;
+    [SerializeField] Collider2D enemyCollider;
+
     //無敵中にtrue
     private bool isInvincible = false;
 
@@ -40,6 +44,14 @@ public class EnemyHP : MonoBehaviour
 
         //無敵と点滅の処理
         StartCoroutine(BecomeInvincible());
+
+        // 1. まずは、敵の位置にプレハブを生成（Instantiate）する
+        // 戻り値として、生成したDamageText型のオブジェクトを「textObj」という変数で受け取る
+        Vector3 spawnDamagetxtPos = new Vector3(transform.position.x, enemyCollider.bounds.max.y, transform.position.z);
+        DamageText textObj = Instantiate(damageTextPrefab, spawnDamagetxtPos, Quaternion.identity);
+
+        // 2. 生成したオブジェクト（textObj）の「Setup」メソッドを呼び出し、現在の攻撃力を渡す！
+        textObj.Setup(damageValue);
 
         //HPが0以下になったら
         if (hp <= 0)

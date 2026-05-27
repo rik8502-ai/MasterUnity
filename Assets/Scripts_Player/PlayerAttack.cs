@@ -51,7 +51,6 @@ public class PlayerAttack : MonoBehaviour
 
     private IEnumerator ClubAttack()
     {
-        Debug.Log("近接攻撃");
         //攻撃中であるためtrueにする
         isAttacking = true;
         

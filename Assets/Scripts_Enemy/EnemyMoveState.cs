@@ -25,17 +25,15 @@ public class EnemyMoveState : MonoBehaviour
     //追跡速度
     [SerializeField] private float chaseSpeed = 3.0f;
 
-
     [Header("左右反転させるTransform")]
     [SerializeField] private Transform enemyTransform;
 
-
     //デフォルトのenemyTransformの回転
     private Quaternion defaultRotation;
-
     private Rigidbody2D rb;
-
     private int moveDirection = 1; // 1:右, -1:左
+    private Vector3 lastPosition;
+
 
     void Start()
     {
@@ -44,7 +42,6 @@ public class EnemyMoveState : MonoBehaviour
         //Playerタグのオブジェクトを探してTransformを取得
         target = GameObject.FindGameObjectWithTag("Player").transform;
         defaultRotation = enemyTransform.rotation;
-        
     }
 
     // Update is called once per frame
@@ -107,7 +104,18 @@ public class EnemyMoveState : MonoBehaviour
         {
             rb.linearVelocityX = -patrolSpeed;
             enemyTransform.rotation = Quaternion.Euler(0, 180, 0);
+        }        
+        // ★ Vector3.Distance ではなく、X座標の引き算（絶対値）に変更！
+        float moveDistanceX = Mathf.Abs(transform.position.x - lastPosition.x);
+
+        // 左右の移動距離が 0.01 未満なら「壁にブロックされている」と判定
+        if (moveDistanceX < 0.01f)
+        {
+            Debug.Log("左右の動きが完全に止まりました！");
+            moveDirection *= -1; // 1と-1をひっくり返す
         }
+        
+        lastPosition = transform.position;
     }
 
     //追跡する
@@ -131,10 +139,12 @@ public class EnemyMoveState : MonoBehaviour
         //方向に従って進む
         rb.linearVelocityX = direction * chaseSpeed;
         
+        
     }
 
     public void FlipDirection()
     {
-        moveDirection *= -1; // 1と-1をひっくり返す
+        if (currentState == State.Patrol) moveDirection *= -1; // 1と-1をひっくり返す
     }
+
 }

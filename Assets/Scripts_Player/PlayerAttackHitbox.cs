@@ -22,6 +22,9 @@ public class PlayerAttackHitbox : MonoBehaviour
                 if (enemyHP.TakeDamage(attackPower))
                 {
                     hitEffectSpawner.SpawnHitEffect();
+
+                    
+                    
                 }
             }
 

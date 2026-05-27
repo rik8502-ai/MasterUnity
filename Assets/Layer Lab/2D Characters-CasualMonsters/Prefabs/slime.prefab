@@ -139,6 +139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAttackHitbox
   attackPower: 1
   hitEffectSpawner: {fileID: 1762240960493102745}
+  damageTextPrefab: {fileID: 8862288777409446944, guid: 1a71508a16385084aa5ca85e223aa50e, type: 3}
 --- !u!212 &6462996650806679645
 SpriteRenderer:
   serializedVersion: 2
@@ -406,8 +407,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5523310697491204763}
+  - component: {fileID: 955837698740614346}
   - component: {fileID: 4732876491191863557}
-  - component: {fileID: 1870348443838214481}
   - component: {fileID: 4379073706569072425}
   - component: {fileID: 758519332624437672}
   - component: {fileID: 6939951122348320721}
@@ -444,6 +445,25 @@ Transform:
   - {fileID: 3166894712414507639}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &955837698740614346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6660441236427461368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ac4ebf1d7607094caf062b038d90b8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAttack
+  currentWeapon: 0
+  attackCollider: {fileID: 4335356239146965681}
+  attackTime: 0.5
+  fireballPrefab: {fileID: 1947871717301538, guid: a990e3ac1318b834488c784d851f42a9, type: 3}
+  firePoint: {fileID: 4095333694468986017}
+  fireballAttacktime: 0.5
+  player: {fileID: 758519332624437672}
 --- !u!114 &4732876491191863557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -458,25 +478,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerWeaponSwicher
   weapon1: {fileID: 3633952882617324013}
   weapon2: {fileID: 7224271719512114821}
---- !u!114 &1870348443838214481
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6660441236427461368}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c31a73ae0a252ac449a73f5762cc672f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerAttack
-  currentWeapon: 0
-  attackCollider: {fileID: 4335356239146965681}
-  attackTime: 0.5
-  fireballPrefab: {fileID: 1947871717301538, guid: a990e3ac1318b834488c784d851f42a9, type: 3}
-  firePoint: {fileID: 4095333694468986017}
-  fireballAttacktime: 0.5
-  player: {fileID: 758519332624437672}
 --- !u!50 &4379073706569072425
 Rigidbody2D:
   serializedVersion: 5

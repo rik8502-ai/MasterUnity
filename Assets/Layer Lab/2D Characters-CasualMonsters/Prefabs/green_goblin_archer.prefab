@@ -384,7 +384,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.05, y: 1.249}
+  m_AnchoredPosition: {x: 0.05, y: 1.42}
   m_SizeDelta: {x: 1366, y: 768}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &6869552206398074003
@@ -748,7 +748,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1305364571558267082}
-  - component: {fileID: 6677375854899061232}
+  - component: {fileID: 3176550115358833172}
   m_Layer: 7
   m_Name: Sprite
   m_TagString: Untagged
@@ -778,7 +778,7 @@ Transform:
   - {fileID: 895122884115942630}
   m_Father: {fileID: 8737888677179768168}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &6677375854899061232
+--- !u!95 &3176550115358833172
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
@@ -960,8 +960,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.1945, y: 1.1945, z: 1.1945}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8222308390654695437}
   - {fileID: 1305364571558267082}
@@ -1006,7 +1006,7 @@ MonoBehaviour:
   attackTime: 0.5
   attackInterval: 2
   enemyTransform: {fileID: 1305364571558267082}
-  anim: {fileID: 6677375854899061232}
+  anim: {fileID: 3176550115358833172}
   player: {fileID: 0}
   attackRange: 12
 --- !u!50 &7598924206699554249
@@ -1088,6 +1088,8 @@ MonoBehaviour:
   maxHp: 5
   invincibleTime: 0.5
   blinkingTime: 0.1
+  damageTextPrefab: {fileID: 8862288777409446944, guid: 1a71508a16385084aa5ca85e223aa50e, type: 3}
+  enemyCollider: {fileID: 4099093562178406430}
   renderers: []
   hpBar: {fileID: 6695175991277852008}
 --- !u!1 &7727731478721189969

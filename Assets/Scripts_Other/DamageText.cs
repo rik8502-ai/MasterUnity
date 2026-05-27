@@ -37,7 +37,7 @@ public class DamageText : MonoBehaviour
 
         // アルファ値（透明度）を少しずつ減らしてフェードアウトさせる
         textColor.a -= fadeSpeed * Time.deltaTime;
-        //Debug.Log(textColor.a);
+
         textMesh.color = textColor;
     }
 }
