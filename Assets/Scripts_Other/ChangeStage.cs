@@ -5,16 +5,18 @@ public class ChangeStage : MonoBehaviour
 {
     [Header("移動先のシーン（ステージ）の名前")]
     [SerializeField] private string nextSceneName = "Stage2";
+    [SerializeField] private PlayerHP playerHp;
 
     // プレイヤーが出口の前にいるかどうかを判定するフラグ
     private bool isPlayerAtDoor = false;
 
     private void Update()
     {
-        //Debug.Log(isPlayerAtDoor);
         // プレイヤーが出口の前にいて、かつ左クリック(0)されたら
         if (isPlayerAtDoor == true && Input.GetMouseButtonDown(0))
         {
+            GameManager.instance.playerHp = playerHp.hp;
+
             // 指定した名前のシーンをロードする
             SceneManager.LoadScene(nextSceneName);
         }
@@ -24,7 +26,6 @@ public class ChangeStage : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         
-        Debug.Log(collision.gameObject.name);
         // 入ってきたのがプレイヤーだったらフラグをON
         if (collision.CompareTag("Player"))
         {

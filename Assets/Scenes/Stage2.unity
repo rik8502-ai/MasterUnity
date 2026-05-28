@@ -266,6 +266,7 @@ GameObject:
   m_Component:
   - component: {fileID: 120092759}
   - component: {fileID: 120092760}
+  - component: {fileID: 120092761}
   m_Layer: 0
   m_Name: WOODS - Second
   m_TagString: Untagged
@@ -347,6 +348,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &120092761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120092758}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01adf024357fa9542a34bd560ee7622e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BackgroundsPixelArt.ParallaxEffect
+  parallaxIntensityX: 0.604
+  parallaxIntensityY: 1
+  independantSpeed: 0
 --- !u!1 &214603025
 GameObject:
   m_ObjectHideFlags: 0
@@ -357,6 +373,7 @@ GameObject:
   m_Component:
   - component: {fileID: 214603026}
   - component: {fileID: 214603027}
+  - component: {fileID: 214603028}
   m_Layer: 0
   m_Name: WOODS - Fourth
   m_TagString: Untagged
@@ -438,6 +455,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &214603028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 214603025}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01adf024357fa9542a34bd560ee7622e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BackgroundsPixelArt.ParallaxEffect
+  parallaxIntensityX: 0.32
+  parallaxIntensityY: 1
+  independantSpeed: 0
 --- !u!1001 &290311246
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -548,6 +580,7 @@ GameObject:
   m_Component:
   - component: {fileID: 390960220}
   - component: {fileID: 390960221}
+  - component: {fileID: 390960222}
   m_Layer: 0
   m_Name: VINES - Second
   m_TagString: Untagged
@@ -629,6 +662,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &390960222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390960219}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01adf024357fa9542a34bd560ee7622e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BackgroundsPixelArt.ParallaxEffect
+  parallaxIntensityX: 0.808
+  parallaxIntensityY: 1
+  independantSpeed: 0
 --- !u!1 &429075072
 GameObject:
   m_ObjectHideFlags: 0
@@ -2202,6 +2250,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1165486409152362504, guid: 21f86f7512c4a0b43b5caf3486059704, type: 3}
+      propertyPath: playerHp
+      value: 
+      objectReference: {fileID: 1892000829}
+    - target: {fileID: 1165486409152362504, guid: 21f86f7512c4a0b43b5caf3486059704, type: 3}
       propertyPath: nextSceneName
       value: BossStage
       objectReference: {fileID: 0}
@@ -2262,6 +2314,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1062522021089311119, guid: 904f7d59193cb0046a399e0c329e4226, type: 3}
+      propertyPath: playerHP
+      value: 
+      objectReference: {fileID: 1892000829}
     - target: {fileID: 1337449073870937127, guid: 904f7d59193cb0046a399e0c329e4226, type: 3}
       propertyPath: m_Name
       value: skull
@@ -6614,6 +6670,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1228024701}
   - component: {fileID: 1228024702}
+  - component: {fileID: 1228024703}
   m_Layer: 0
   m_Name: BUSH - BACKGROUND
   m_TagString: Untagged
@@ -6695,6 +6752,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1228024703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1228024700}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01adf024357fa9542a34bd560ee7622e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BackgroundsPixelArt.ParallaxEffect
+  parallaxIntensityX: 1
+  parallaxIntensityY: 1
+  independantSpeed: 0
 --- !u!1 &1302549124
 GameObject:
   m_ObjectHideFlags: 0
@@ -7118,6 +7190,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1603918341}
   - component: {fileID: 1603918342}
+  - component: {fileID: 1603918343}
   m_Layer: 0
   m_Name: WOODS - Third
   m_TagString: Untagged
@@ -7199,6 +7272,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1603918343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603918340}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01adf024357fa9542a34bd560ee7622e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BackgroundsPixelArt.ParallaxEffect
+  parallaxIntensityX: 0.5
+  parallaxIntensityY: 1
+  independantSpeed: 0
 --- !u!1 &1719441020 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6276242581502969476, guid: b3dee2aea912a43eab9bebcadf56e434, type: 3}
@@ -7368,6 +7456,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ecccd14177f364b8db55890b29520f59, type: 3}
+--- !u!114 &1892000829 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3120525926249958084, guid: ecccd14177f364b8db55890b29520f59, type: 3}
+  m_PrefabInstance: {fileID: 1892000828}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c2565275d17e544d8431a36327adc9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHP
 --- !u!4 &1892000833 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5523310697491204763, guid: ecccd14177f364b8db55890b29520f59, type: 3}
@@ -7394,6 +7493,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2011047840}
   - component: {fileID: 2011047841}
+  - component: {fileID: 2011047842}
   m_Layer: 0
   m_Name: BACKGROUND
   m_TagString: Untagged
@@ -7475,6 +7575,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &2011047842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2011047839}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01adf024357fa9542a34bd560ee7622e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BackgroundsPixelArt.ParallaxEffect
+  parallaxIntensityX: 0
+  parallaxIntensityY: 1
+  independantSpeed: 0
 --- !u!1 &2048166441
 GameObject:
   m_ObjectHideFlags: 0
@@ -7563,6 +7678,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2099627187}
   - component: {fileID: 2099627188}
+  - component: {fileID: 2099627189}
   m_Layer: 0
   m_Name: WOODS - First
   m_TagString: Untagged
@@ -7644,6 +7760,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &2099627189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2099627186}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01adf024357fa9542a34bd560ee7622e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BackgroundsPixelArt.ParallaxEffect
+  parallaxIntensityX: 1
+  parallaxIntensityY: 1
+  independantSpeed: 0
 --- !u!1 &2134945536 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6276242581502969476, guid: b3dee2aea912a43eab9bebcadf56e434, type: 3}

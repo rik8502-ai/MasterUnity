@@ -6,10 +6,10 @@ using TMPro;
 public class PlayerHP : MonoBehaviour
 {
     //現在のHP
-    private int hp;
+    public int hp ;
 
     //最大HP
-    [SerializeField] private int maxHp = 5;
+    private int maxHp;
 
     //無敵時間
     [SerializeField] private float invincibleTime = 0.5f;
@@ -18,7 +18,7 @@ public class PlayerHP : MonoBehaviour
     [SerializeField] private float blinkingTime = 0.1f;
 
     //無敵中にtrue
-    public bool isInvincible = false;
+    public bool isInvincible { get; private set; } = false;
     private SpriteRenderer[] renderers;
 
     //HPのテキスト
@@ -35,16 +35,20 @@ public class PlayerHP : MonoBehaviour
 
     private void Start()
     {
-        hp = maxHp;
-
-        //sr = GetComponent<SpriteRenderer>();
         renderers = GetComponentsInChildren<SpriteRenderer>();
 
+        if (GameManager.instance != null)
+        {
+            hp = GameManager.instance.playerHp;
+            maxHp = GameManager.instance.playerMaxHp;
+        }
         UpdateUI();
+
     }
 
     public void TakeDamage(int damageValue)
     {
+        //Debug.Log( isInvincible + ", HP: " + hp );
         if (isInvincible || hp <= 0) return;
 
         hp -= damageValue;
@@ -55,11 +59,8 @@ public class PlayerHP : MonoBehaviour
         DamageText textObj = Instantiate(damageTextPrefab, spawnDamagetxtPos, Quaternion.identity);
         // 生成したオブジェクト（textObj）の「Setup」メソッドを呼び出し、現在の攻撃力を渡す！
         textObj.Setup(damageValue);
-
         UpdateUI();
-
         StartCoroutine(BecomeInvincible());
-
 
         if (hp <= 0)
         {
@@ -88,11 +89,10 @@ public class PlayerHP : MonoBehaviour
         while (timer < invincibleTime)
         {
             //スプライトの表示・非表示を切り替える
-            //sr.enabled = !sr.enabled;
-                foreach (SpriteRenderer renderer in renderers)
-                {
-                    renderer.enabled = !renderer.enabled;
-                }
+            foreach (SpriteRenderer renderer in renderers)
+            {
+                renderer.enabled = !renderer.enabled;
+            }
             //タイマーに点滅時間を足す
             timer += blinkingTime;
 
@@ -101,12 +101,10 @@ public class PlayerHP : MonoBehaviour
         }
 
         //スプライトを表示する
-        //sr.enabled = true;
         foreach (SpriteRenderer renderer in renderers)
         {
             renderer.enabled = true;
         }
-
 
         //無敵が終わったためfalseにする
         isInvincible = false;

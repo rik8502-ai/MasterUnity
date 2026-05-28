@@ -22,18 +22,15 @@ public class Player : MonoBehaviour
     //プレイヤーのAnimatorを入れる箱
     private Animator anim;
 
-    //private Vector2 defaultScale;
 
 
     // ゲーム開始時一回呼ばれる
     void Start()
     {
+        
         rb = GetComponent<Rigidbody2D>();
-        //defaultScale = transform.localScale;
         anim = GetComponent<Animator>();
     }
-
-    // Update is called once per frame
     void Update()
     {
         Walk();

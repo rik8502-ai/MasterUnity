@@ -1050,10 +1050,6 @@ PrefabInstance:
       propertyPath: gameOverUI
       value: 
       objectReference: {fileID: 1986174319}
-    - target: {fileID: 3120525926249958084, guid: ecccd14177f364b8db55890b29520f59, type: 3}
-      propertyPath: playerCollider
-      value: 
-      objectReference: {fileID: 682868878}
     - target: {fileID: 5523310697491204763, guid: ecccd14177f364b8db55890b29520f59, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.32876
@@ -1210,11 +1206,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!70 &682868878 stripped
-CapsuleCollider2D:
-  m_CorrespondingSourceObject: {fileID: 1483979489558586403, guid: 904f7d59193cb0046a399e0c329e4226, type: 3}
-  m_PrefabInstance: {fileID: 45683993}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &684682998
 GameObject:
   m_ObjectHideFlags: 0
@@ -12360,6 +12351,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1165486409152362504, guid: 21f86f7512c4a0b43b5caf3486059704, type: 3}
+      propertyPath: playerHp
+      value: 
+      objectReference: {fileID: 534877607}
     - target: {fileID: 9065353428576881959, guid: 21f86f7512c4a0b43b5caf3486059704, type: 3}
       propertyPath: m_Name
       value: StageChange

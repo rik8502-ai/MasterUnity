@@ -344,6 +344,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Background
       objectReference: {fileID: 0}
+    - target: {fileID: 699432510610489383, guid: e4db058043ea96447b3abdb6dc15bd10, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1771420601912876258, guid: e4db058043ea96447b3abdb6dc15bd10, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3287641907195542162, guid: e4db058043ea96447b3abdb6dc15bd10, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5694583737645667586, guid: e4db058043ea96447b3abdb6dc15bd10, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7264257480755459791, guid: e4db058043ea96447b3abdb6dc15bd10, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

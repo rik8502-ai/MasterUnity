@@ -23,11 +23,13 @@ public class SceneChangeManager : MonoBehaviour
     //タイトル画面に遷移する
     public void OnClickGoTitle()
     {
+        GameManager.instance.Reset();
         SceneManager.LoadScene(titleSceneName);
     }
 
     public void OnClickRestart()
     {
+        GameManager.instance.Reset();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

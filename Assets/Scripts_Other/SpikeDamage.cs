@@ -6,7 +6,6 @@ public class SpikeDamage : MonoBehaviour
 
     [SerializeField] private int damagePower = 1;
 
-    [SerializeField] private bool isDamaging = false;
 
     [SerializeField] private PlayerHP playerHP;
 

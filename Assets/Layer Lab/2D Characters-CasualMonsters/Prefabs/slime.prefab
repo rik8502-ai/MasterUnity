@@ -663,10 +663,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c2565275d17e544d8431a36327adc9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHP
-  maxHp: 20
+  hp: 20
   invincibleTime: 0.5
   blinkingTime: 0.1
-  isInvincible: 0
   hpText: {fileID: 0}
   hpBar: {fileID: 0}
   gameOverUI: {fileID: 0}
