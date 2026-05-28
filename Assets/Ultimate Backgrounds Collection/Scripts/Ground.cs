@@ -13,6 +13,7 @@ namespace UltimateBackgroundsCollection
 
         private void Update()
         {
+            if (player == null) return;
             transform.position = new Vector2(player.position.x, transform.position.y);
         }
     }

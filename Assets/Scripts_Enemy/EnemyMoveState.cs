@@ -58,6 +58,7 @@ public class EnemyMoveState : MonoBehaviour
 
     private void CheckDistance()
     {
+        if (target == null) return;
         //このオブジェクトとプレイヤーとの距離を計算
         float distance = Vector2.Distance(transform.position, target.position);
 

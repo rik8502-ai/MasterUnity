@@ -25,4 +25,9 @@ public class SceneChangeManager : MonoBehaviour
     {
         SceneManager.LoadScene(titleSceneName);
     }
+
+    public void OnClickRestart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 }

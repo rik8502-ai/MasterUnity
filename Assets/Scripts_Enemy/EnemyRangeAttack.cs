@@ -30,6 +30,8 @@ public class EnemyRangeAttack : MonoBehaviour
 
     void Update()
     {
+        if (player == null) return;
+        
         //プレイヤーと自分の距離を計算する
         float distance = Vector2.Distance(transform.position, player.transform.position);
         

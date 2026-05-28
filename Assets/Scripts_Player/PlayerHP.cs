@@ -27,6 +27,9 @@ public class PlayerHP : MonoBehaviour
 
     [SerializeField] private Image hpBar;
 
+    [SerializeField] private GameObject gameOverUI;
+    [SerializeField] private GameObject mainUI;
+
     private void Start()
     {
         hp = maxHp;
@@ -54,7 +57,11 @@ public class PlayerHP : MonoBehaviour
 
             UpdateUI();
             Destroy(gameObject);
-            
+            if (gameOverUI != null)
+            {
+                gameOverUI.SetActive(true);
+                mainUI.SetActive(false);
+            }
         }
         
     }
