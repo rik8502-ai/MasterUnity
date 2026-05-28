@@ -11,16 +11,20 @@ public class ChangeStage : MonoBehaviour
 
     private void Update()
     {
+        //Debug.Log(isPlayerAtDoor);
         // プレイヤーが出口の前にいて、かつ左クリック(0)されたら
         if (isPlayerAtDoor == true && Input.GetMouseButtonDown(0))
         {
-            GoToNextStage();
+            // 指定した名前のシーンをロードする
+            SceneManager.LoadScene(nextSceneName);
         }
     }
 
     // コライダー（Is Trigger）の中に誰かが入ってきた時
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        
+        Debug.Log(collision.gameObject.name);
         // 入ってきたのがプレイヤーだったらフラグをON
         if (collision.CompareTag("Player"))
         {
@@ -38,10 +42,5 @@ public class ChangeStage : MonoBehaviour
         }
     }
 
-    // 次のステージへ移動する処理
-    private void GoToNextStage()
-    {
-        // 指定した名前のシーンをロードする
-        SceneManager.LoadScene(nextSceneName);
-    }
+    
 }

@@ -111,7 +111,6 @@ public class EnemyMoveState : MonoBehaviour
         // 左右の移動距離が 0.01 未満なら「壁にブロックされている」と判定
         if (moveDistanceX < 0.01f)
         {
-            Debug.Log("左右の動きが完全に止まりました！");
             moveDirection *= -1; // 1と-1をひっくり返す
         }
         

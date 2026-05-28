@@ -57,8 +57,16 @@ public class EnemyHP : MonoBehaviour
         if (hp <= 0)
         {
             hp = 0; //HPが0以下にならないようにする
-            Destroy(gameObject); //HPが0以下になったら敵を破壊する
+            
+            //ステージクリアかどうかの処理
+            if(SceneClearManager.instance != null)
+            {
+                SceneClearManager.instance.StageClear();
+            }
+
             UpdateUI();
+            Destroy(gameObject); //HPが0以下になったら敵を破壊する
+            
         }
         return true;
     }

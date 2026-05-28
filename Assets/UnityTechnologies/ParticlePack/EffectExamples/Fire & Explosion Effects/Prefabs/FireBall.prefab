@@ -9686,5 +9686,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Fisreball
   speed: 10
-  damage: 1
+  damage: 2
   lifeTime: 3
