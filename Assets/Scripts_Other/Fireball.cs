@@ -10,7 +10,6 @@ public class Fisreball : MonoBehaviour
     
     [Header("何秒後に自動で消滅するか（画面外まで飛んだ時用）")]
     [SerializeField] private float lifeTime = 3f;
-
     private Rigidbody2D rb;
 
     private void Start()

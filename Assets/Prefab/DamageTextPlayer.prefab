@@ -196,5 +196,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DamageText
   textMesh: {fileID: 268145774251955439}
   moveSpeed: 1.54
-  lifeTime: 30
+  lifeTime: 1
   fadeSpeed: 1

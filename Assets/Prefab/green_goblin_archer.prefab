@@ -776,6 +776,7 @@ Transform:
   - {fileID: 5132015255048643552}
   - {fileID: 7192023875300343586}
   - {fileID: 895122884115942630}
+  - {fileID: 6358811199139082660}
   m_Father: {fileID: 8737888677179768168}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &3176550115358833172
@@ -891,6 +892,37 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &7205563518658324567
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6358811199139082660}
+  m_Layer: 7
+  m_Name: HitEffectPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6358811199139082660
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7205563518658324567}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.58, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1305364571558267082}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7343468529470277364
 GameObject:
   m_ObjectHideFlags: 0
@@ -943,6 +975,7 @@ GameObject:
   - component: {fileID: 7598924206699554249}
   - component: {fileID: 4099093562178406430}
   - component: {fileID: 2809697739870134124}
+  - component: {fileID: 6045246191279215524}
   m_Layer: 7
   m_Name: green_goblin_archer
   m_TagString: Enemy
@@ -1090,8 +1123,24 @@ MonoBehaviour:
   blinkingTime: 0.1
   damageTextPrefab: {fileID: 8862288777409446944, guid: 1a71508a16385084aa5ca85e223aa50e, type: 3}
   enemyCollider: {fileID: 4099093562178406430}
+  hitEffectSpawner: {fileID: 6045246191279215524}
+  effectPoint: {fileID: 6358811199139082660}
   renderers: []
   hpBar: {fileID: 6695175991277852008}
+--- !u!114 &6045246191279215524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7605223661393306891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd7854345991d1044b7c0804ba6025c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHitEffect
+  hitEffectPrefab: {fileID: 8680598818964007281, guid: e9873a507d7b75045a45ce866e8906d6, type: 3}
+  effectScale: 0.2
 --- !u!1 &7727731478721189969
 GameObject:
   m_ObjectHideFlags: 0

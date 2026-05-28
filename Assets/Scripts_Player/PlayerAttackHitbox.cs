@@ -4,7 +4,6 @@ public class PlayerAttackHitbox : MonoBehaviour
 {
     //攻撃力
     [SerializeField] private int attackPower = 1;
-    [SerializeField] private PlayerHitEffect hitEffectSpawner;
 
     //接触した瞬間を検知する
     private void OnTriggerEnter2D(Collider2D collision)
@@ -19,13 +18,7 @@ public class PlayerAttackHitbox : MonoBehaviour
             if (enemyHP != null)
             {
                 //TakeDamageでダメージがあった時のみ以下の処理を行う
-                if (enemyHP.TakeDamage(attackPower))
-                {
-                    hitEffectSpawner.SpawnHitEffect();
-
-                    
-                    
-                }
+                if (enemyHP.TakeDamage(attackPower)) return; //ダメージが入らなかったらこのメソッドを中断する
             }
 
         }

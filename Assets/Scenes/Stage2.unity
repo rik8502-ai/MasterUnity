@@ -2262,10 +2262,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1193977571488161495, guid: 904f7d59193cb0046a399e0c329e4226, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1337449073870937127, guid: 904f7d59193cb0046a399e0c329e4226, type: 3}
       propertyPath: m_Name
       value: skull
@@ -7299,6 +7295,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1762240960493102745, guid: ecccd14177f364b8db55890b29520f59, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3120525926249958084, guid: ecccd14177f364b8db55890b29520f59, type: 3}
       propertyPath: hpBar
       value: 
@@ -7315,6 +7315,10 @@ PrefabInstance:
       propertyPath: gameOverUI
       value: 
       objectReference: {fileID: 435380345}
+    - target: {fileID: 3120525926249958084, guid: ecccd14177f364b8db55890b29520f59, type: 3}
+      propertyPath: isInvincible
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5523310697491204763, guid: ecccd14177f364b8db55890b29520f59, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.32

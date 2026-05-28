@@ -138,7 +138,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAttackHitbox
   attackPower: 2
-  hitEffectSpawner: {fileID: 1762240960493102745}
 --- !u!212 &6462996650806679645
 SpriteRenderer:
   serializedVersion: 2
@@ -415,7 +414,6 @@ GameObject:
   - component: {fileID: 3134525835093779373}
   - component: {fileID: 1323804256023628396}
   - component: {fileID: 3120525926249958084}
-  - component: {fileID: 1762240960493102745}
   m_Layer: 8
   m_Name: slime
   m_TagString: Player
@@ -675,21 +673,6 @@ MonoBehaviour:
   mainUI: {fileID: 0}
   damageTextPrefab: {fileID: 8862288777409446944, guid: d8096b38da2d16049b9d6fc023e5e08f, type: 3}
   playerCollider: {fileID: 213236021831435567}
---- !u!114 &1762240960493102745
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6660441236427461368}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd7854345991d1044b7c0804ba6025c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HitEffectSpawner
-  hitEffectPrefab: {fileID: 8680598818964007281, guid: e9873a507d7b75045a45ce866e8906d6, type: 3}
-  attackPoint: {fileID: 3166894712414507639}
-  effectScale: 0.2
 --- !u!1 &7224271719512114821
 GameObject:
   m_ObjectHideFlags: 0

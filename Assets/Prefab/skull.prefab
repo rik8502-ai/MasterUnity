@@ -211,6 +211,7 @@ GameObject:
   - component: {fileID: 1483979489558586403}
   - component: {fileID: 6102746799503260255}
   - component: {fileID: 5904598155440564075}
+  - component: {fileID: 8351705384979326844}
   m_Layer: 7
   m_Name: skull
   m_TagString: Enemy
@@ -268,6 +269,8 @@ MonoBehaviour:
   blinkingTime: 0.1
   damageTextPrefab: {fileID: 8862288777409446944, guid: 1a71508a16385084aa5ca85e223aa50e, type: 3}
   enemyCollider: {fileID: 1483979489558586403}
+  hitEffectSpawner: {fileID: 8351705384979326844}
+  effectPoint: {fileID: 4521904545498228008}
   renderers: []
   hpBar: {fileID: 2978842585386838413}
 --- !u!114 &8318580718055701065
@@ -439,6 +442,20 @@ MonoBehaviour:
   attackInterval: 2
   isAttacking: 0
   anim: {fileID: 5126944415757635800}
+--- !u!114 &8351705384979326844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1337449073870937127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd7854345991d1044b7c0804ba6025c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHitEffect
+  hitEffectPrefab: {fileID: 8680598818964007281, guid: e9873a507d7b75045a45ce866e8906d6, type: 3}
+  effectScale: 0.2
 --- !u!1 &1337976616397734407
 GameObject:
   m_ObjectHideFlags: 0
@@ -926,6 +943,37 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &5553117364193124917
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4521904545498228008}
+  m_Layer: 0
+  m_Name: HitEffectPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4521904545498228008
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5553117364193124917}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.27, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 992842273869754352}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6851714478070293905
 GameObject:
   m_ObjectHideFlags: 0
@@ -1057,6 +1105,7 @@ Transform:
   - {fileID: 3240430030474609508}
   - {fileID: 6459333315633092601}
   - {fileID: 3264080774634076899}
+  - {fileID: 4521904545498228008}
   m_Father: {fileID: 991589068396926450}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &285238706403461057

@@ -18,6 +18,8 @@ public class EnemyHP : MonoBehaviour
     //ダメージ受けた時のテキスト表示と、頭の上に表示させるために取得したコライダー
     [SerializeField] private DamageText damageTextPrefab;
     [SerializeField] Collider2D enemyCollider;
+    [SerializeField] private HitEffect hitEffectSpawner;
+    [SerializeField] private Transform effectPoint;
 
     //無敵中にtrue
     private bool isInvincible = false;
@@ -41,6 +43,7 @@ public class EnemyHP : MonoBehaviour
         if(hp <= 0 || isInvincible) return false; //HPが0以下 or 無敵中だったらこのメソッドを中断する
         hp -= damageValue; //ダメージ分HPを減らす
         UpdateUI();
+        hitEffectSpawner.SpawnHitEffect(effectPoint); //ヒットエフェクト
 
         //無敵と点滅の処理
         StartCoroutine(BecomeInvincible());
