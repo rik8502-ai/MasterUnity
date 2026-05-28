@@ -7359,8 +7359,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: slime
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1870348443838214481, guid: ecccd14177f364b8db55890b29520f59, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

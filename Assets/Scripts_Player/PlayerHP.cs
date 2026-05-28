@@ -19,7 +19,6 @@ public class PlayerHP : MonoBehaviour
 
     //無敵中にtrue
     public bool isInvincible = false;
-
     private SpriteRenderer[] renderers;
 
     //HPのテキスト
@@ -29,6 +28,10 @@ public class PlayerHP : MonoBehaviour
 
     [SerializeField] private GameObject gameOverUI;
     [SerializeField] private GameObject mainUI;
+
+    //ダメージ受けた時のテキスト表示と、頭の上に表示させるために取得したコライダー
+    [SerializeField] private DamageText damageTextPrefab;
+    [SerializeField] Collider2D playerCollider;
 
     private void Start()
     {
@@ -45,6 +48,13 @@ public class PlayerHP : MonoBehaviour
         if (isInvincible || hp <= 0) return;
 
         hp -= damageValue;
+
+        // 敵の位置にプレハブを生成（Instantiate）する
+        // 戻り値として、生成したDamageText型のオブジェクトを「textObj」という変数で受け取る
+        Vector3 spawnDamagetxtPos = new Vector3(transform.position.x, playerCollider.bounds.max.y, transform.position.z);
+        DamageText textObj = Instantiate(damageTextPrefab, spawnDamagetxtPos, Quaternion.identity);
+        // 生成したオブジェクト（textObj）の「Setup」メソッドを呼び出し、現在の攻撃力を渡す！
+        textObj.Setup(damageValue);
 
         UpdateUI();
 

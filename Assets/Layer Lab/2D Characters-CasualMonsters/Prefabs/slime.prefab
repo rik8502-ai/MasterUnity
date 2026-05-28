@@ -137,7 +137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72666b9c578996c40bf20f41bd153643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAttackHitbox
-  attackPower: 1
+  attackPower: 2
   hitEffectSpawner: {fileID: 1762240960493102745}
 --- !u!212 &6462996650806679645
 SpriteRenderer:
@@ -665,7 +665,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c2565275d17e544d8431a36327adc9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHP
-  maxHp: 3
+  maxHp: 20
   invincibleTime: 0.5
   blinkingTime: 0.1
   isInvincible: 0
@@ -673,6 +673,8 @@ MonoBehaviour:
   hpBar: {fileID: 0}
   gameOverUI: {fileID: 0}
   mainUI: {fileID: 0}
+  damageTextPrefab: {fileID: 8862288777409446944, guid: d8096b38da2d16049b9d6fc023e5e08f, type: 3}
+  playerCollider: {fileID: 213236021831435567}
 --- !u!114 &1762240960493102745
 MonoBehaviour:
   m_ObjectHideFlags: 0

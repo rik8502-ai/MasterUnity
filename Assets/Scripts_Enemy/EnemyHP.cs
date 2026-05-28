@@ -45,16 +45,14 @@ public class EnemyHP : MonoBehaviour
         //無敵と点滅の処理
         StartCoroutine(BecomeInvincible());
 
-        // 1. まずは、敵の位置にプレハブを生成（Instantiate）する
+        // 敵の位置にプレハブを生成（Instantiate）する
         // 戻り値として、生成したDamageText型のオブジェクトを「textObj」という変数で受け取る
         Vector3 spawnDamagetxtPos = new Vector3(transform.position.x, enemyCollider.bounds.max.y, transform.position.z);
         DamageText textObj = Instantiate(damageTextPrefab, spawnDamagetxtPos, Quaternion.identity);
-
-        // 2. 生成したオブジェクト（textObj）の「Setup」メソッドを呼び出し、現在の攻撃力を渡す！
+        // 生成したオブジェクト（textObj）の「Setup」メソッドを呼び出し、現在の攻撃力を渡す！
         textObj.Setup(damageValue);
 
-        //HPが0以下になったら
-        if (hp <= 0)
+        if (hp <= 0) //HPが0以下になったら
         {
             hp = 0; //HPが0以下にならないようにする
             
@@ -65,7 +63,7 @@ public class EnemyHP : MonoBehaviour
             }
 
             UpdateUI();
-            Destroy(gameObject); //HPが0以下になったら敵を破壊する
+            Destroy(gameObject); 
             
         }
         return true;
