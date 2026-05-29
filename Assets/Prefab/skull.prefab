@@ -205,7 +205,6 @@ GameObject:
   - component: {fileID: 991589068396926450}
   - component: {fileID: 8816552138760442362}
   - component: {fileID: 8322781573545668593}
-  - component: {fileID: 8318580718055701065}
   - component: {fileID: 7350683172530472485}
   - component: {fileID: 4643064546520542560}
   - component: {fileID: 1483979489558586403}
@@ -273,22 +272,6 @@ MonoBehaviour:
   effectPoint: {fileID: 4521904545498228008}
   renderers: []
   hpBar: {fileID: 2978842585386838413}
---- !u!114 &8318580718055701065
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1337449073870937127}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccf1564faa794a849a9304ca696d75c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  moveSpeed: 5
-  enemyTransform: {fileID: 992842273869754352}
-  currentRotation: {x: 0, y: 0, z: 0, w: 1}
-  moveDirection: 1
 --- !u!212 &7350683172530472485
 SpriteRenderer:
   serializedVersion: 2

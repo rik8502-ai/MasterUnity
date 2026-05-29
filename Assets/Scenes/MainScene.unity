@@ -2604,6 +2604,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1323594606}
   m_CullTransparentMesh: 1
+--- !u!1 &1348657368 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9083975860349194984, guid: c22a54a6699506d4bba2cede64946cb2, type: 3}
+  m_PrefabInstance: {fileID: 1463153747}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1352504043
 GameObject:
   m_ObjectHideFlags: 0
@@ -2687,6 +2692,21 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1090225009986842730, guid: c22a54a6699506d4bba2cede64946cb2, type: 3}
   m_PrefabInstance: {fileID: 1463153747}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1356113467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348657368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b04e48a6614b9fa4082719aac198b1ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WaveGimmick
+  speed: 2
+  amplitude: 2
+  moveOnYAxis: 1
 --- !u!1 &1389852626
 GameObject:
   m_ObjectHideFlags: 0
@@ -2739,7 +2759,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1090225009986842730, guid: c22a54a6699506d4bba2cede64946cb2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.94
+      value: 7.99
       objectReference: {fileID: 0}
     - target: {fileID: 1090225009986842730, guid: c22a54a6699506d4bba2cede64946cb2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2784,7 +2804,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9083975860349194984, guid: c22a54a6699506d4bba2cede64946cb2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1356113467}
   m_SourcePrefab: {fileID: 100100000, guid: c22a54a6699506d4bba2cede64946cb2, type: 3}
 --- !u!1 &1508648043
 GameObject:

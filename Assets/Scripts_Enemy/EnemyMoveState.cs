@@ -9,22 +9,15 @@ public class EnemyMoveState : MonoBehaviour
         Patrol,
         Chase,
     }
-
     //State型の変数に[Patrol]を代入　最初はパトロール状態からスタートする
     private State currentState = State.Patrol;
-
-    //ターゲット
     private Transform target;
-
     //検知する距離
     [SerializeField] private float detectDistance = 3.0f;
-
     //巡回速度
     [SerializeField] private float patrolSpeed = 1.0f;
-
     //追跡速度
     [SerializeField] private float chaseSpeed = 3.0f;
-
     [Header("左右反転させるTransform")]
     [SerializeField] private Transform enemyTransform;
 
@@ -44,7 +37,6 @@ public class EnemyMoveState : MonoBehaviour
         defaultRotation = enemyTransform.rotation;
     }
 
-    // Update is called once per frame
     void Update()
     {
         CheckDistance();
