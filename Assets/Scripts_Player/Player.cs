@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
     private Rigidbody2D rb;
 
     //プレイヤーのAnimatorを入れる箱
-    private Animator anim;
+    [SerializeField] private Animator anim;
 
 
 

@@ -12,9 +12,13 @@ public class ChangeStage : MonoBehaviour
 
     private void Update()
     {
+        
+
         // プレイヤーが出口の前にいて、かつ左クリック(0)されたら
         if (isPlayerAtDoor == true && Input.GetMouseButtonDown(0))
         {
+            Debug.Log(playerHp.hp);
+
             GameManager.instance.playerHp = playerHp.hp;
 
             // 指定した名前のシーンをロードする

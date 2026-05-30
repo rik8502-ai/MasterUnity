@@ -20,16 +20,16 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private Transform firePoint;
     [SerializeField] private float fireballAttacktime = 0.5f; //遠距離攻撃のクールダウン時間
 
-    private bool isAttacking = false; 
-    private Animator anim; //プレイヤーのアニメーターを入れる箱
+    [SerializeField] private Animator anim; //プレイヤーのアニメーターを入れる箱
 
+    private bool isAttacking = false; 
     [SerializeField] private Player player; //Playerスクリプトを入れる箱
     
     void Start()
     {
         if (attackCollider != null) attackCollider.enabled = false;
         //プレイヤーのAnimatorを取得してanimに入れる
-        anim = GetComponent<Animator>();
+        //anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
