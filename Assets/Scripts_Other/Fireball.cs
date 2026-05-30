@@ -36,7 +36,8 @@ public class Fisreball : MonoBehaviour
             EnemyHP enemyHP = collision.GetComponent<EnemyHP>();
             if (enemyHP != null)
             {
-                enemyHP.TakeDamage(damage);
+                enemyHP.TakeDamage(damage,2);
+                SoundManager.instance.PlaySE2();
             }
 
             // 当たったらファイアーボール自身を消滅させる

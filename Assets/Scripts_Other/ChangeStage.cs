@@ -4,8 +4,9 @@ using UnityEngine.SceneManagement; // ★シーン移動機能を使うために
 public class ChangeStage : MonoBehaviour
 {
     [Header("移動先のシーン（ステージ）の名前")]
-    [SerializeField] private string nextSceneName = "Stage2";
+    [SerializeField] private string nextSceneName;
     [SerializeField] private PlayerHP playerHp;
+    [SerializeField] private PlayerAttack playerAattack;
 
     // プレイヤーが出口の前にいるかどうかを判定するフラグ
     private bool isPlayerAtDoor = false;
@@ -17,7 +18,6 @@ public class ChangeStage : MonoBehaviour
         // プレイヤーが出口の前にいて、かつ左クリック(0)されたら
         if (isPlayerAtDoor == true && Input.GetMouseButtonDown(0))
         {
-            Debug.Log(playerHp.hp);
 
             GameManager.instance.playerHp = playerHp.hp;
 
@@ -34,6 +34,7 @@ public class ChangeStage : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             isPlayerAtDoor = true;
+            playerAattack.StopAttack = true; //プレイヤーが出口にいるときは攻撃できないようにする
         }
     }
 
@@ -44,6 +45,7 @@ public class ChangeStage : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             isPlayerAtDoor = false;
+            playerAattack.StopAttack = false; //プレイヤーが出口から出たら攻撃できるようにする
         }
     }
 

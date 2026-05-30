@@ -18,6 +18,7 @@ public class SpikeDamage : MonoBehaviour
             if (playerHP != null && playerHP.isInvincible == false)
             {
                 playerHP.TakeDamage(damagePower);
+                
 
             }
         }

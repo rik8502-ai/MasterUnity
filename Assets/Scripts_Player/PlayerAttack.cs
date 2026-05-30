@@ -1,7 +1,6 @@
 using UnityEngine;
-using System.Collections; //コルーチンを使うために必要
-
-
+using System.Collections; 
+using UnityEngine.EventSystems; //UIの上でクリックしたときに攻撃しないようにするために必要
 public class PlayerAttack : MonoBehaviour
 {
     public enum WeaponType
@@ -19,24 +18,23 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private GameObject fireballPrefab;
     [SerializeField] private Transform firePoint;
     [SerializeField] private float fireballAttacktime = 0.5f; //遠距離攻撃のクールダウン時間
-
-    [SerializeField] private Animator anim; //プレイヤーのアニメーターを入れる箱
-
+    [SerializeField] private Animator anim; 
     private bool isAttacking = false; 
+    public bool StopAttack;
     [SerializeField] private Player player; //Playerスクリプトを入れる箱
     
     void Start()
     {
         if (attackCollider != null) attackCollider.enabled = false;
-        //プレイヤーのAnimatorを取得してanimに入れる
-        //anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject()) return; //UIの上でクリックしたときは攻撃しない
+        
         //左クリックを押すかつ攻撃中じゃなければ
-        if (Input.GetMouseButtonDown(0) && isAttacking == false)
+        if (Input.GetMouseButtonDown(0) && isAttacking == false && StopAttack == false)
         {
             if ( currentWeapon == WeaponType.Club)
             {
@@ -53,14 +51,13 @@ public class PlayerAttack : MonoBehaviour
     {
         //攻撃中であるためtrueにする
         isAttacking = true;
-        
+        SoundManager.instance.PlaySE3();
         //攻撃用オブジェクトの当たり判定をONにする
         attackCollider.enabled = true;
 
         anim.SetInteger("WeaponType", 1); //武器の種類をアニメーターに伝える（1はクラブ）
         anim.SetTrigger("Attack"); //攻撃のトリガーを引く
-
-
+        
         //指定時間待機
         yield return new WaitForSeconds(attackTime);
 
@@ -73,7 +70,6 @@ public class PlayerAttack : MonoBehaviour
     {
         //攻撃中であるためtrueにする
         isAttacking = true;
-
         anim.SetInteger("WeaponType", 2); //武器の種類をアニメーターに伝える（2はファイアーボール）
         anim.SetTrigger("Attack");
 

@@ -30,13 +30,14 @@ public class EnemyHP : MonoBehaviour
     //HPバー
     [SerializeField] private Image hpBar;
 
+
     private void Start()
     {
         hp = maxHp;
         UpdateUI();
     }
 
-    public bool TakeDamage(int damageValue)
+    public bool TakeDamage(int damageValue, int weaponNum)
     {
         
         //戻り値を追加して、ダメージが入ったかどうかを返すようにする（playerAttackHitbox）
@@ -44,6 +45,15 @@ public class EnemyHP : MonoBehaviour
         hp -= damageValue; //ダメージ分HPを減らす
         UpdateUI();
         hitEffectSpawner.SpawnHitEffect(effectPoint); //ヒットエフェクト
+        //SEを鳴らす
+        if (weaponNum == 1)
+        {
+            SoundManager.instance.PlaySE1();
+        }
+        else if (weaponNum == 2)
+        {
+            SoundManager.instance.PlaySE2();
+        }
 
         //無敵と点滅の処理
         StartCoroutine(BecomeInvincible());

@@ -9,9 +9,11 @@ public class GameManager : MonoBehaviour
     public int playerHp;
     public int playerMaxHp = 5;
 
+    private AudioSource audioSource;
+
     private void Awake()
     {
-        // ★超重要：すでに同じ管理人がいたら、自分を破壊して重複を防ぐ
+        //すでに同じ管理人がいたら、自分を破壊して重複を防ぐ
         if (instance != null)
         {
             Destroy(gameObject);
@@ -20,11 +22,14 @@ public class GameManager : MonoBehaviour
 
         instance = this;
 
-        // ★最強の呪文：このオブジェクトを「シーンが切り替わっても絶対に破壊しない」設定にする！
+        // このオブジェクトをシーンが切り替わっても絶対に破壊しない設定にする！
         DontDestroyOnLoad(gameObject);
 
         // ゲーム開始時にHPを満タンにする
         playerHp = playerMaxHp;
+
+        audioSource = GetComponent<AudioSource>();
+
     }
 
     public void Reset()

@@ -17,10 +17,11 @@ public class PlayerAttackHitbox : MonoBehaviour
             //EnemyHPスクリプトnullじゃなかったら
             if (enemyHP != null)
             {
+                
                 //TakeDamageでダメージがあった時のみ以下の処理を行う
-                if (enemyHP.TakeDamage(attackPower)) return; //ダメージが入らなかったらこのメソッドを中断する
+                if (enemyHP.TakeDamage(attackPower, 1)) return;
+                
             }
-
         }
     }
 }

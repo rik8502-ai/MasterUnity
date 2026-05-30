@@ -28,10 +28,10 @@ public class HitEffect : MonoBehaviour
             Debug.LogWarning("attackPoint が設定されていないため、自身の位置にエフェクトを生成しました。");
         }
 
-        // 1. 指定した位置にプレハブを生成する
+        //指定した位置にプレハブを生成する
         GameObject effectInstance = Instantiate(hitEffectPrefab, spawnPosition, Quaternion.identity);
         
-        // 2. 生成したエフェクトの大きさを変更する
+        //生成したエフェクトの大きさを変更する
         effectInstance.transform.localScale = new Vector3(effectScale, effectScale, effectScale);
 
         Destroy(effectInstance, 1f); // 1秒後にエフェクトを消す（エフェクトの長さに合わせて調整してください）

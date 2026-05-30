@@ -52,6 +52,7 @@ public class PlayerHP : MonoBehaviour
         if (isInvincible || hp <= 0) return;
 
         hp -= damageValue;
+        SoundManager.instance.PlaySE4();
 
         // 敵の位置にプレハブを生成（Instantiate）する
         // 戻り値として、生成したDamageText型のオブジェクトを「textObj」という変数で受け取る
