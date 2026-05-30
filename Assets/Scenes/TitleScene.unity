@@ -479,6 +479,7 @@ MonoBehaviour:
   se1: {fileID: 8300000, guid: 070993e2e6ff44949ab9529da42bff10, type: 3}
   se2: {fileID: 8300000, guid: 63268f53b64d33747a2411205a9ea302, type: 3}
   se3: {fileID: 8300000, guid: 28cebf1247b86a541a16d7dfcda8cf23, type: 3}
+  se4: {fileID: 8300000, guid: 6ea7bd68681ddf241893e006e7f2bd9f, type: 3}
   seAudioSource: {fileID: 329673488}
 --- !u!82 &329673488
 AudioSource:
